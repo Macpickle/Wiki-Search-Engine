@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv310/
+
+# Visual Studio files
+*.sln
+*.vcxproj
+*.vcxproj.user
+*.filters
+
+# Data, Model, and Output
+Data/output/
+Data/wikiarticles.xml.bz2
+output/
+
+# Package and Dependency files
+packages/
+vcpkg_installed/
+hnswlib/
+
+# IDE-specific files
+.vscode/
+.vs/
+
+# Build directories
+EngineDB/
+x64/
+hnsq.bin

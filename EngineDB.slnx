@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="EngineDB.vcxproj" Id="3fac0d62-a5b4-4591-8f57-cde03ad53131" />
+</Solution>

@@ -1,0 +1,11 @@
+{
+  "dependencies": [
+    "libpqxx",
+    "libxml2",
+    "bzip2",
+    "nlohmann-json",
+    "cpp-httplib",
+    "protobuf"
+  ],
+  "builtin-baseline": "6d7bf7ef2193e2d1c5798a5ff8811d533104c861"
+}
