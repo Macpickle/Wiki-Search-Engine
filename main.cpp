@@ -7,17 +7,16 @@
 #include <pqxx/connection.hxx>
 
 int main() {
-	pqxx::connection conn("host=localhost port=5432 dbname=VectorStore user=postgres password=??????");
+	pqxx::connection conn("host=localhost port=5432 dbname=VectorStore user=postgres password=pickle");
 	char userInput;										// user input for options
 
 	// options for parsing
 	std::string parsedJSONpath = "./Data/output";		// path to where JSON files are stored
-	std::string indexPath = "hnsq.bin";					// path to where index's are stored
 	size_t batchSize = 250;								// batch value for parsing to embedding server
 	size_t maxThreads = 8;	
 	int maxPages = 500;								// maximum number of pages to parse (-1 for no limit)
 
-	VectorStorage storage(conn, indexPath, maxThreads);	// Initialize vector storage
+	VectorStorage storage(conn, maxThreads);		// Initialize vector storage
 
 	ArticleParser parser(parsedJSONpath, batchSize, storage, maxPages);	// Initialize article parser, used for option 1
 
@@ -34,7 +33,6 @@ int main() {
 		if (userInput == '1') {
 			try {
 				parser.parseJSONFiles();
-				storage.save();
 			}
 			catch (const std::exception& e) {
 				std::cerr << "Error during parsing and storing vectors: " << e.what() << std::endl;
