@@ -7,7 +7,7 @@
 #include <pqxx/connection.hxx>
 
 int main() {
-	pqxx::connection conn("host=localhost port=5432 dbname=VectorStore user=postgres password=pickle");
+	pqxx::connection conn("host=localhost port=5432 dbname=VectorStore user=postgres password=??????");
 	char userInput;										// user input for options
 
 	// options for parsing
