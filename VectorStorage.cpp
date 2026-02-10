@@ -459,6 +459,10 @@ std::string VectorStorage::buildTokenStatArray(
 
     out << "]";
 
+    if (tokenFreq.empty()) {
+        return "ARRAY[]::token_stat[]";
+	}
+
     return out.str();
 }
 
