@@ -32,6 +32,8 @@ After placing the `wikiarticles.xml.bz2` file in the `Data/` folder, you can run
 
 This script will read the `wikiarticles.xml.bz2` dump file from the `Data/` folder, parse it, and save the extracted Wikipedia articles as JSON files in the `output/` folder.
 
+The cleaning of the text from the page is crutial to the quality of the search/embedding. The current file that handles the cleaning of the wikipedia dump data is very rough, if you would like to improve the quality of the cleaning of text, you can, but may take a much longer time to parse.
+
 If you wish to use a different dump file, simply open the **`WikipediaParse.py`** script and modify the line:
 ```python
 dump_file = "wikiarticles.xml.bz2"
@@ -64,10 +66,9 @@ If you encounter any issues, make sure your XML dump is valid and that it's the 
 ```
 /WikiSearchEngine
 │
-├── /Data
-│ ├── README.md                 # This file
-│ ├── wikiarticles.xml.bz2      # Place your downloaded Wikipedia dump here
-│ └── /output                   # Output folder for the parsed JSON files, will be created automatically
-│
-├── WikipediaParse.py           # Python script to parse the Wikipedia dump
+└── /Data
+  ├──/output                   # Output folder for the parsed JSON files, will be created automatically
+  ├── README.md                # This file
+  ├── wikiarticles.xml.bz2     # Place your downloaded Wikipedia dump here
+  └──WikipediaParse.py         # Python script to parse the Wikipedia dump
 ```
