@@ -1,7 +1,7 @@
 # EngineDB - Semantic Search Engine
 
 EngineDB is a high-performance semantic search engine that processes Wikipedia articles and enables fast similarity-based searching using neural embeddings and approximate nearest neighbor indexing.
-
+A working demo is now available, with limited usage. Please allow the backend server a few minutes to warm up and turn online. You can view the project [here](https://wiki-search-prod-1.onrender.com/).
 ## Overview
 
 EngineDB combines modern NLP techniques with efficient database technologies to create a searchable knowledge base:
